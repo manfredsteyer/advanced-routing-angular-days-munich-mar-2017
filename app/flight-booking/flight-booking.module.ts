@@ -15,6 +15,7 @@ import {FlightService} from "./services/flight.service";
 import {FlightResolver} from "./services/flight.resolver";
 import {FlightHistoryComponent} from "../flight-history/flight-history.component";
 import {ChatComponent} from "./chat/chat.component";
+import { AuthModule } from '../auth/auth.module';
 
 
 
@@ -24,7 +25,8 @@ import {ChatComponent} from "./chat/chat.component";
         FormsModule,
         ReactiveFormsModule,
         SharedModule,
-        FlightBookingRouterModule
+        FlightBookingRouterModule,
+        AuthModule
     ],
     declarations: [
         FlightSearchComponent,

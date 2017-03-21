@@ -1,7 +1,7 @@
 <h1>Flight Edit!</h1>
 
-<!--
-<div *ngIf="exitWarning.show" class="alert alert-warning">
+
+<div *ngIf="exitWarning.show" style="position: absolute; left: 100px; top: 100px; width: 200px; height: 50px; z-index: 10" class="alert alert-warning">
     <div>
         Daten wurden nicht gespeichert! Trotzdem Maske verlassen?
     </div>
@@ -10,7 +10,6 @@
         <a href="javascript:void(0)" (click)="decide(false)" class="btn btn-default">Nein</a>
     </div>
 </div>
--->
 
 
 <div *ngIf="flight">

@@ -11,6 +11,8 @@ import {FlightHistoryComponent} from "./flight-history/flight-history.component"
 import {BookingsComponent} from "./bookings/bookings.component";
 import {FlightBookingModule} from "./flight-booking/flight-booking.module";
 import { AuthService } from './auth/auth.service';
+import { CoreModule } from './core/core.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
     imports: [
@@ -20,7 +22,9 @@ import { AuthService } from './auth/auth.service';
         ReactiveFormsModule,
         SharedModule,
         AppRouterModule,
-        FlightBookingModule
+        CoreModule,
+        AuthModule.forRoot()
+        // FlightBookingModule // <-- Würde Lazy Loading verhindern
     ],
     declarations: [
         AppComponent,

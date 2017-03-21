@@ -13,6 +13,6 @@ export class FlightResolver implements Resolve<Flight>
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any>|Promise<any>|any {
         let id = route.params['id'];
         console.debug('FlightResolver', id);
-        return this.flightService.findById(id);
+        return this.flightService.findById(id).delay(7000);
     }
 }

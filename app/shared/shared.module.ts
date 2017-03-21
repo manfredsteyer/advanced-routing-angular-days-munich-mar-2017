@@ -10,6 +10,8 @@ import {CustomPreloadingStrategy} from "./preload/custom-preloading.strategy";
 import { AuthService } from '../auth/auth.service';
 import { AuthGuard } from './auth.guard';
 import { AuthChildGuard } from './auth-child.guard';
+import { ExitGuard } from './exit.guard';
+import { FlightResolver } from '../flight-booking/services/flight.resolver';
 
 @NgModule({
     imports: [
@@ -25,9 +27,11 @@ import { AuthChildGuard } from './auth-child.guard';
     ],
     providers:  [
         AuthGuard,
-        AuthService,
+        ExitGuard,
+        //AuthService,
         CustomPreloadingStrategy,
-        AuthChildGuard
+        AuthChildGuard,
+        FlightResolver
     ],
     exports:[
         CityPipe,
