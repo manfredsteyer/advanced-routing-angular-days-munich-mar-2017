@@ -15,7 +15,7 @@ const FLIGHT_BOOKING_ROUTES: Routes = [
     {
             // Componentless-Routing Sample
             path: '',
-            // canActivateChild: [AuthChildGuard],
+            canActivateChild: [AuthChildGuard],
             children: [
                 {
                     path: '',
